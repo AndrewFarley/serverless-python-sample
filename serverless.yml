@@ -12,6 +12,10 @@ package:
 custom:
   pythonRequirements:
     dockerizePip: true
+    dockerInDockerPath: /Users/farley/Projects/serverless-python-sample
+    useDownloadCache: false
+    useStaticCache: false
+
 
 functions:
   listPosts:
