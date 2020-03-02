@@ -1,0 +1,32 @@
+service: sls-py-sample
+
+provider:
+  name: aws
+  runtime: python3.6
+  memorySize: 128
+
+package:
+  exclude:
+    - test.py
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+functions:
+  listPosts:
+    handler: handler.list_posts
+    events:
+      - http:
+          path: posts
+          method: get
+
+  getPost:
+    handler: handler.get_post
+    events:
+      - http:
+          path: posts/{id}
+          method: get
+
+plugins:
+  - serverless-python-requirements

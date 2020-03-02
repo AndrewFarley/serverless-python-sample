@@ -1,0 +1,40 @@
+# This is for AWS
+boto3
+
+# To format logs with json
+python-json-logger
+
+# For YAML config parsing
+pyyaml
+
+# For sqlalchemy
+sqlalchemy>=1.2.5
+# sqlalchemy
+# (for UUIDType if we want UUID's in the database)
+sqlalchemy_utils
+# For sqlalchemy mysql (will need to have mysqldev lib installed)
+# mysqlclient
+# sqlalchemy tools?
+
+# For recaptcha (todo)
+# recaptcha
+
+python-magic
+requests
+
+# For AWS X-Ray
+# aws-xray-sdk
+
+# For vcards
+vobject
+
+# For linkedin
+python3-linkedin
+
+# For writing XLS files
+xlsxwriter
+
+# For QR Codes
+qrcode[pil]
+
+colorama
