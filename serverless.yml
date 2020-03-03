@@ -5,14 +5,10 @@ provider:
   runtime: python3.6
   memorySize: 128
 
-package:
-  exclude:
-    - test.py
-
 custom:
   pythonRequirements:
     dockerizePip: true
-    dockerInDockerPath: /Users/farley/Projects/serverless-python-sample
+    # dockerInDockerPath: /var/lib/docker/overlay2/28563d53cb02700ba5e0b6f60efa337fa9ba1e0cc38374967927a568c7df415e/merged/test
     useDownloadCache: false
     useStaticCache: false
 
@@ -34,3 +30,26 @@ functions:
 
 plugins:
   - serverless-python-requirements
+
+
+package:
+  exclude:
+    - "serverless.yml"
+    - ".DS_Store"
+    - ".git"
+    - ".gitignore"
+    - ".requirements"
+    - ".serverless-python-requirements-static-cache"
+    - "node_modules/**"
+    - ".requirements/**"
+    - "**.md"
+    - "**tar.gz"
+    - "**.sh"
+    - "**.txt"
+    - "**/**.yml"
+    - "**.zip"
+    - "package.json"
+    - "package-lock.json"
+    - "docs/**"
+    - "tests/**"
+    - "**.sql"
